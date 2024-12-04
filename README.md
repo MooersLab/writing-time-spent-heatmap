@@ -13,7 +13,8 @@ I think I can pick up a similar motivational driving force by generating a heat 
 
 ## Why this is useful?
 
-The heat map reveals periods of time when I have great difficulty getting my daily writing done.
+The comparison of multiple years reveals seasonal patterns.
+The heat map also reveals periods of time when I have great difficulty getting my daily writing done.
 For me this happens, this happens when I am collecting X-ray diffraction data around the clock for several days and preparing multiple presentations concurrently.
 This identifies an area where I need to develop better self-regulation mechanisms, like not committing to two talks in the same two-week period.
 I can generally persist with my writing schedule through teaching, traveling to attend scientific conferences, attending said conferences, and serving on Grant review panels.
@@ -43,6 +44,12 @@ The cron job calls the following zsh alias. I am using a pyenv environment made 
 
 ```bash
 alias hmj='cd ~/6003TimeTracking/cb && source python311-env/bin/activate && ./python311-env/bin/python3.11 hmj.py && deactivate && echo "Run hmj.py and show total effort as a heatmap."'
+```
+
+To post the updated hmj.png file on github, I extend the move alias as follows: 
+
+```bash
+hmj='cd ~/6003TimeTracking/cb && source python311-env/bin/activate && ./python311-env/bin/python3.11 hmj.py && deactivate && cp hmj.png ~/6112MooersLabGitHubLabRepos/writing-timespent-heatmap/images/. && cd  ~/6112MooersLabGitHubLabRepos/writing-timespent-heatmap && gac images/hmj.png "Updated." && git push && echo "Run hmj.py that shows a series of heatmaps by effort."'
 ```
 
 ## Update history
