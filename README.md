@@ -12,6 +12,15 @@ I thought I could pick up a similar motivational driving force by generating a h
 
 ![hmj.png](./images/hmj.png)
 
+## Why this is useful?
+
+The heat map reveals periods of time when I have great difficulty getting my daily writing done.
+For me this happens around the times that collecting x-ray diffraction data around the clock for several days and preparing multiple presentations concurrently converge.
+This identifies an area where I need to develop better self-regulation mechanisms, like not committing to two talks in the same two-week period.
+I can generally persist with my writing schedule through teaching, traveling to attend scientific conferences, attending said conferences, and serving on Grant review panels.
+
+According to [research by Robert Boice in the 1980s](https://www.sciencedirect.com/science/article/abs/pii/0005796789901447), academics who record their writing effort are four times more productive than those who do not.
+Those academics who share their writing progress with their colleagues are nine times more productive.
 
 
 ## How it works
