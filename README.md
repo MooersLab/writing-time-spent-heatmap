@@ -21,7 +21,10 @@ I thought I could pick up a similar motivational driving force by generating a h
 
 ## Installation
 
-1. 
+1. Assign project numbers to projects in a separate database or spreadsheet. I also use these numbers to start the name of project folders on my home directory to ease navigation on the command line. Your home folder can hold over 10,000 files. There is no need to use `Documents`.
+2. Edit the file paths in hmj.py to fit your workflow.
+3. Install the required Python packages. Take care that matplotlib is not yet being built in Python 3.13. I use Python 3.12. Calmap and calplot will probably have to be installed with pip.
+4. If you wish, set up a cron job to run hmj.py every morning and display the heatmap.
 
 
 ## Update history
