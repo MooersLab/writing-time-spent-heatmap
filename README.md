@@ -10,7 +10,7 @@ I find the heat map of commits to GitHub to be motivating in terms of trying to 
 I thought I could pick up a similar motivational driving force by generating a heat map of hours spent working on journal articles per day.
 
 
-[!hmj.png](./images/hmj.png)
+![hmj.png](./images/hmj.png)
 
 
 
