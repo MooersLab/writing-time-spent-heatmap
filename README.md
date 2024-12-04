@@ -22,8 +22,8 @@ According to [research by Robert Boice in the 1980s](https://www.sciencedirect.c
 Those academics who share their writing progress with their colleagues are nine times more productive.
 
 I started my database 2022 May 1. 
-I wrote and deployed `hmj.py` in Novmeber 2023.
-It seems to have made a difference.
+I wrote and deployed `hmj.py` in November 2023.
+It made a difference in terms of expended effort in 2024 compared to 2023.
 
 
 ## How it works
