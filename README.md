@@ -1,9 +1,7 @@
-# Heatmap of hours spent writing journal articles.
-![Version](https://img.shields.io/static/v1?label=matplotlib-voice-in&message=0.0&color=brightcolor)
+![Version](https://img.shields.io/static/v1?label=writing-time-spent-heatmap&message=0.0&color=brightcolor)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-
-# Library of voice-triggered code snippets for matplotlib using Voice-In Plus (coming soon)
+# Heatmap of hours spent writing journal articles
 
 
 ## Update history
