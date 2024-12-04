@@ -21,6 +21,10 @@ I can generally persist with my writing schedule through teaching, traveling to 
 According to [research by Robert Boice in the 1980s](https://www.sciencedirect.com/science/article/abs/pii/0005796789901447), academics who record their writing effort are four times more productive than those who do not.
 Those academics who share their writing progress with their colleagues are nine times more productive.
 
+I started my database 2022 May 1. 
+I wrote and deployed `hmj.py` in Novmeber 2023.
+It seems to have made a difference.
+
 
 ## How it works
 
