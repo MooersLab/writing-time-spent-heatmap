@@ -28,7 +28,7 @@ It made a difference in terms of expended effort in 2024 compared to 2023.
 
 ## How it works
 
-1. I track time spent on various projects by project number and project directory name in a sqlite database, mytime.db. I view and edit this database with DB Browser for Sqlite.
+1. I track time spent on various projects by project number and project directory name in an SQLite database, `my time.db`. I view and edit this database with DB Browser for Sqlite.
 2. `hmj.py` reads the database file and searches for journal article entries by project number. Mine are in the range of 1 to 999. It sums the hours spent per day and generates the heatmap via matplotlib.
 3. A cron job to run `./hmj.py` every morning at 4:00 a.m. I stare at the displayed image and then get back to writing.
 
@@ -36,14 +36,14 @@ It made a difference in terms of expended effort in 2024 compared to 2023.
 
 1. Assign project numbers to projects in a separate database or spreadsheet. I also use these numbers to start the name of project folders on my home directory to ease navigation on the command line. Your home folder can hold over 10,000 files. There is no need to use `Documents`.
 2. Edit the file paths in hmj.py to fit your workflow.
-3. Install the required Python packages. Take care that matplotlib is not yet being built in Python 3.13. I use Python 3.11. Calmap and calplot will probably have to be installed with pip. It may be best to use a conda or pyenv environment to avoid the Python dependency nightmare.
+3. Install the required Python packages. Take care that matplotlib is not yet being built in Python 3.13. I use Python 3.11. The Python modules `calmap` and `calplot` will probably have to be installed with pip. It may be best to use a `conda` or `pyenv` environment to avoid the Python dependency nightmare at the expense of wasting disk space with redundant files.
 4. If you wish, set up a cron job to run hmj.py every morning and display the heatmap.
 
-The cron job calls the following zsh alias. I am using a pyenv environment.
+The cron job calls the following zsh alias. I am using a pyenv environment made with Python3.11 installed with home brew.
 
-```
+```bash
 alias hmj='cd ~/6003TimeTracking/cb && source python311-env/bin/activate && ./python311-env/bin/python3.11 hmj.py && deactivate && echo "Run hmj.py and show total effort as a heatmap."'
-
+```
 
 ## Update history
 
