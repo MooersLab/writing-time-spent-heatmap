@@ -52,6 +52,31 @@ To post the updated hmj.png file on github, I extend the move alias as follows:
 hmj='cd ~/6003TimeTracking/cb && source python311-env/bin/activate && ./python311-env/bin/python3.11 hmj.py && deactivate && cp hmj.png ~/6112MooersLabGitHubLabRepos/writing-timespent-heatmap/images/. && cd  ~/6112MooersLabGitHubLabRepos/writing-timespent-heatmap && gac images/hmj.png "Updated." && git push && echo "Run hmj.py that shows a series of heatmaps by effort."'
 ```
 
+Here, `gac` is a bash function because I prefer entering one command over two:
+
+```bash
+gac () {
+	echo "Function to git add a file and then commit the changes with a message."
+	echo "Takes the name of a file and the message in a string."
+	echo "Must set up repository in advance of using this function."
+	if [ $# -lt 2 ]
+	then
+		echo "$0: not enough arguments" >&2
+		echo "Usage: gca filename 'message about the commit'"
+		return 2
+	elif [ $# -gt 2 ]
+	then
+		echo "$0: too many arguments" >&2
+		echo "Usage: gct "
+		echo "Note absence of file extension .tex"
+		return 2
+	fi
+	git add "$1"
+	git commit -m "$2" "$1"
+}
+```
+
+
 ## Update history
 
 |Version      | Changes                                                                                                                                  | Date                 |
