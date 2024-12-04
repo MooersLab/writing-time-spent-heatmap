@@ -14,7 +14,7 @@ I think I can pick up a similar motivational driving force by generating a heat 
 ## Why this is useful?
 
 The heat map reveals periods of time when I have great difficulty getting my daily writing done.
-For me this happens around the times that collecting x-ray diffraction data around the clock for several days and preparing multiple presentations concurrently converge.
+For me this happens, this happens when I am collecting X-ray diffraction data around the clock for several days and preparing multiple presentations concurrently.
 This identifies an area where I need to develop better self-regulation mechanisms, like not committing to two talks in the same two-week period.
 I can generally persist with my writing schedule through teaching, traveling to attend scientific conferences, attending said conferences, and serving on Grant review panels.
 
@@ -28,8 +28,8 @@ It made a difference in terms of expended effort in 2024 compared to 2023.
 
 ## How it works
 
-1. I track my time spent on various projects by project number and project directory name in mytime.db.
-2. A Cron job to run `./hmj.py` every morning at 4:00 a.m. I stare at the displayed image and then get back to writing.
+1. I track time spent on various projects by project number and project directory name in a sqlite database, mytime.db. I view and edit this database with DB Browser for Sqlite.
+2. A cron job to run `./hmj.py` every morning at 4:00 a.m. I stare at the displayed image and then get back to writing.
 
 ## Installation
 
@@ -41,9 +41,9 @@ It made a difference in terms of expended effort in 2024 compared to 2023.
 
 ## Update history
 
-|Version      | Changes                                                                                                                                                                         | Date                 |
-|:-----------|:------------------------------------------------------------------------------------------------------------------------------------------|:--------------------|
-| Version 0.1 |   Added badges, funding, and update table.  Initial commit.                                                                                                                | 2024 December 4  |
+|Version      | Changes                                                                                                                                  | Date                 |
+|:-----------|:------------------------------------------------------------------------------------------------------------------------------------------|:---------------------|
+| Version 0.1 |   Added badges, funding, and update table.  Initial commit.                                                                              | 2024 December 4      |
 
 ## Sources of funding
 
