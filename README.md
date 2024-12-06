@@ -7,7 +7,9 @@
 
 I wanted an automated way of summing up the effort that I had expended on various writing projects in the form of a heatmap.
 I find the heat map of commits to GitHub to be motivating in terms of trying to make frequent commits.
-I think I can pick up a similar motivational driving force by generating a heat map of hours spent working on journal articles per day.
+I hypothesize that I can gain a similar motivational driving force by displaying in public a heat map of hours spent working on journal articles per day.
+I started posting this on December 4, 2024.
+Time will tell if this practice makes a difference.
 
 ![hmj.png](./images/hmj.png)
 
