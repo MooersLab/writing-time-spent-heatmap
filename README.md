@@ -84,7 +84,7 @@ gac () {
 |Version      | Changes                                                                                                                                  | Date                 |
 |:------------|:---------------------------------------------------------------------------------------------------------------------------------------- |:---------------------|
 | Version 0.1 |   Added badges, funding, and update table.  Initial commit.                                                                              | 2024 December 4      |
-| Version 0.2 |   Added badges, funding, and update table.  Initial commit.                                                                              | 2024 December 16      |
+| Version 0.2 |   Light editing of the README.md file.                                                                                                   | 2024 December 16      |
 
 ## Sources of funding
 
