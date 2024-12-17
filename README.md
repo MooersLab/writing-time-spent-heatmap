@@ -1,4 +1,4 @@
-![Version](https://img.shields.io/static/v1?label=writing-time-spent-heatmap&message=0.1&color=brightcolor)
+![Version](https://img.shields.io/static/v1?label=writing-time-spent-heatmap&message=0.2&color=brightcolor)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 # Heatmap of hours spent writing journal articles
@@ -17,7 +17,7 @@ Time will tell if this practice makes a difference.
 
 The comparison of multiple years reveals seasonal patterns.
 The heat map also reveals periods of time when I have great difficulty getting my daily writing done.
-For me this happens, this happens when I am collecting X-ray diffraction data around the clock for several days and preparing multiple presentations concurrently.
+For me, this happens when I am collecting X-ray diffraction data around the clock for several days and preparing multiple presentations concurrently.
 This identifies an area where I need to develop better self-regulation mechanisms, like not committing to two talks in the same two-week period.
 I can generally persist with my writing schedule through teaching, traveling to attend scientific conferences, attending said conferences, and serving on Grant review panels.
 
@@ -42,13 +42,13 @@ It made a difference in terms of expended effort in 2024 compared to 2023.
 3. Install the required Python packages. Take care that matplotlib is not yet being built in Python 3.13. I use Python 3.11. The Python modules `calmap` and `calplot` will probably have to be installed with pip. It may be best to use a `conda` or `pyenv` environment to avoid the Python dependency nightmare at the expense of wasting disk space with redundant files.
 4. If you wish, set up a cron job to run hmj.py every morning and display the heatmap.
 
-The cron job calls the following zsh alias. I am using a pyenv environment made with Python3.11 installed with home brew.
+The cron job calls the following zsh alias. I am using a `pyenv` environment made with Python3.11 installed with `home brew`.
 
 ```bash
 alias hmj='cd ~/6003TimeTracking/cb && source python311-env/bin/activate && ./python311-env/bin/python3.11 hmj.py && deactivate && echo "Run hmj.py and show total effort as a heatmap."'
 ```
 
-To post the updated hmj.png file on github, I extend the move alias as follows: 
+To post the updated `hmj.png` file on GitHub, I extend the `hmj` alias as follows: 
 
 ```bash
 hmj='cd ~/6003TimeTracking/cb && source python311-env/bin/activate && ./python311-env/bin/python3.11 hmj.py && deactivate && cp hmj.png ~/6112MooersLabGitHubLabRepos/writing-timespent-heatmap/images/. && cd  ~/6112MooersLabGitHubLabRepos/writing-timespent-heatmap && gac images/hmj.png "Updated." && git push && echo "Run hmj.py that shows a series of heatmaps by effort."'
@@ -60,7 +60,7 @@ Here, `gac` is a bash function because I prefer entering one command over two:
 gac () {
 	echo "Function to git add a file and then commit the changes with a message."
 	echo "Takes the name of a file and the message in a string."
-	echo "Must set up repository in advance of using this function."
+	echo "Must set up a repository before using this function."
 	if [ $# -lt 2 ]
 	then
 		echo "$0: not enough arguments" >&2
@@ -69,7 +69,7 @@ gac () {
 	elif [ $# -gt 2 ]
 	then
 		echo "$0: too many arguments" >&2
-		echo "Usage: gct "
+		echo "Usage: gca filename 'message about the commit'"
 		echo "Note absence of file extension .tex"
 		return 2
 	fi
@@ -84,6 +84,7 @@ gac () {
 |Version      | Changes                                                                                                                                  | Date                 |
 |:------------|:---------------------------------------------------------------------------------------------------------------------------------------- |:---------------------|
 | Version 0.1 |   Added badges, funding, and update table.  Initial commit.                                                                              | 2024 December 4      |
+| Version 0.2 |   Light editing of the README.md file.                                                                                                   | 2024 December 16      |
 
 ## Sources of funding
 
