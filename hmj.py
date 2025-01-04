@@ -24,7 +24,7 @@ datam['Date'] = pd.to_datetime(datam['DateDashed'])
 datam = datam.set_index('Date')
 isinstance(datam.index, pd.DatetimeIndex)
 GhrPerDay = pd.Series(datam.TimeHr)
-calplot.calplot(data=GhrPerDay, cmap='Blues', vmin=0.0, how=None, figsize=(16,8));
+calplot.calplot(data=GhrPerDay, cmap='Blues', vmin=0.0, how=None, figsize=(16,10));
 plt.suptitle('Manuscript Writing Effort', y=1.0, fontsize=20);
 #plt.savefig('hmj.png', dpi=300, w)
 # Remove old version and write updated version
