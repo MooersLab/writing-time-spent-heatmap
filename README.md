@@ -36,7 +36,7 @@ Script `hmgj.py` combines grant and journal writing effort.
 2. `hmj.py` reads the database file and searches for journal article entries by project number. Mine are in the range of 1 to 999. It sums the hours spent per day and generates the heatmap via matplotlib.
 3. A cron job to run `./hmj.py` every morning at 4:00 a.m. I stare at the displayed image and then get back to writing.
 
-### Sql code to generate the table zTimeSpent
+### SQL code to generate the table zTimeSpent
 
 ```sql
 CREATE TABLE "zTimeSpent" (
