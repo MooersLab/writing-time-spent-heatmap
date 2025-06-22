@@ -103,6 +103,7 @@ gac () {
 |:------------|:---------------------------------------------------------------------------------------------------------------------------------------- |:---------------------|
 | Version 0.1 |   Added badges, funding, and update table.  Initial commit.                                                                              | 2024 December 4      |
 | Version 0.2 |   Light editing of the README.md file.                                                                                                   | 2024 December 16      |
+| Version 0.3 |   Add code for database table. Combined grant and journal article writing effort.                                                        | 2025 June 22      |
 
 ## Sources of funding
 
