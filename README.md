@@ -31,9 +31,27 @@ It made a difference in terms of expended effort in 2024 compared to 2023.
 
 ## How it works
 
-1. I track time spent on various projects by project number and project directory name in an SQLite database, `my time.db`. I view and edit this database with DB Browser for Sqlite.
+1. I track time spent on various projects by project number and project directory name in an SQLite database, `my time.db`. I view and edit this database with DB Browser for Sqlite. The schema for the database table `zTimeSpent` is given below for reproducibility.
 2. `hmj.py` reads the database file and searches for journal article entries by project number. Mine are in the range of 1 to 999. It sums the hours spent per day and generates the heatmap via matplotlib.
 3. A cron job to run `./hmj.py` every morning at 4:00 a.m. I stare at the displayed image and then get back to writing.
+
+### Sql code to generate the table zTimeSpent
+
+```sql
+CREATE TABLE "zTimeSpent" (
+	"id"	INTEGER NOT NULL,
+	"DateDashed"	DATE,
+	"Start"	TIME,
+	"End"	TIME,
+	"TimeClock"	TIME GENERATED ALWAYS AS (strftime('%H:%M', CAST((julianday("End") - julianday("Start")) AS REAL), '12:00')) VIRTUAL,
+	"TimeHr"	REAL GENERATED ALWAYS AS (ROUND((julianday("End") - julianday("Start")) * 24, 2)) VIRTUAL,
+	"ProjectID"	INTEGER,
+	"ProjectDirectory"	TEXT,
+	"Description"	TEXT,
+	"Activity"	TEXT DEFAULT 'none',
+	PRIMARY KEY("id")
+);
+```
 
 ## Installation
 
