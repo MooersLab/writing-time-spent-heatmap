@@ -5,24 +5,24 @@
 
 ## Problem addressed
 
-I wanted an automated way of summing up the effort that I had expended on various writing projects in the form of a heatmap.
-I find the heat map of commits to GitHub to be motivating in terms of trying to make frequent commits.
-I hypothesize that I can gain a similar motivational driving force by displaying in public a heat map of hours spent working on journal articles per day.
+I wanted an automated way to sum up the effort I had expended on various writing projects in the form of a heatmap.
+The heat map of commits to GitHub is motivating in terms of encouraging frequent commits.
+I can gain a similar motivational driving force by displaying in public a heat map of hours spent working on journal articles per day.
 I started posting this on December 4, 2024.
 Time will tell if this practice makes a difference.
 
-![hmj.png](./images/hmj.png)
+![hmj.png](./images/hmgj.png)
 
-## Why this is useful?
+## Why is this useful?
 
-The comparison of multiple years reveals seasonal patterns.
-The heat map also reveals periods of time when I have great difficulty getting my daily writing done.
+Comparing multiple years reveals seasonal patterns.
+The heat map also reveals periods when I have great difficulty completing my daily writing.
 For me, this happens when I am collecting X-ray diffraction data around the clock for several days and preparing multiple presentations concurrently.
 This identifies an area where I need to develop better self-regulation mechanisms, like not committing to two talks in the same two-week period.
-I can generally persist with my writing schedule through teaching, traveling to attend scientific conferences, attending said conferences, and serving on Grant review panels.
+I can generally maintain my writing schedule despite teaching, traveling to attend scientific conferences, attending these conferences, and serving on Grant review panels.
 
 According to [research by Robert Boice in the 1980s](https://www.sciencedirect.com/science/article/abs/pii/0005796789901447), academics who record their writing effort are four times more productive than those who do not.
-Those academics who share their writing progress with their colleagues are nine times more productive.
+Academics who share their writing progress with colleagues are nine times more productive.
 
 I started my database 2022 May 1. 
 I wrote and deployed `hmj.py` in November 2023.
@@ -37,9 +37,9 @@ It made a difference in terms of expended effort in 2024 compared to 2023.
 
 ## Installation
 
-1. Assign project numbers to projects in a separate database or spreadsheet. I also use these numbers to start the name of project folders on my home directory to ease navigation on the command line. Your home folder can hold over 10,000 files. There is no need to use `Documents`.
+1. Assign project numbers to projects in a separate database or spreadsheet. I also use these numbers to start the names of project folders on my home directory to ease navigation on the command line. Your home folder can hold over 10,000 files. There is no need to use `Documents`.
 2. Edit the file paths in hmj.py to fit your workflow.
-3. Install the required Python packages. Take care that matplotlib is not yet being built in Python 3.13. I use Python 3.11. The Python modules `calmap` and `calplot` will probably have to be installed with pip. It may be best to use a `conda` or `pyenv` environment to avoid the Python dependency nightmare at the expense of wasting disk space with redundant files.
+3. Install the required Python packages. Take care that matplotlib is not yet being built in Python 3.13. I use Python 3.11. The Python modules `calmap` and `calplot` will likely need to be installed using 'pip'. It may be best to use a `conda` or `pyenv` environment to avoid the Python dependency nightmare at the expense of wasting disk space with redundant files.
 4. If you wish, set up a cron job to run hmj.py every morning and display the heatmap.
 
 The cron job calls the following zsh alias. I am using a `pyenv` environment made with Python3.11 installed with `home brew`.
