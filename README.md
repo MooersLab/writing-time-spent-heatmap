@@ -27,6 +27,7 @@ Academics who share their writing progress with colleagues are nine times more p
 I started my database 2022 May 1. 
 I wrote and deployed `hmj.py` in November 2023.
 It made a difference in terms of expended effort in 2024 compared to 2023.
+Script `hmgj.py` combines grant and journal writing effort.
 
 
 ## How it works
