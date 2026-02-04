@@ -98,7 +98,7 @@ gac () {
 ```
 
 ## Related site
-mooerslab/writing-time-splitbox-heatmap
+mooerslab/writing-time-splitbox-heatmap.
 
 ## Update history
 
@@ -111,8 +111,8 @@ mooerslab/writing-time-splitbox-heatmap
 
 ## Sources of funding
 
-- NIH: R01 CA242845
-- NIH: R01 AI088011
-- NIH: P30 CA225520 (PI: R. Mannel)
-- NIH: P20 GM103640 and P30 GM145423 (PI: A. West)
+- NIH: R01 CA242845.
+- NIH: R01 AI088011.
+- NIH: P30 CA225520 (PI: R. Mannel).
+- NIH: P20 GM103640 and P30 GM145423 (PI: A. West).
 
