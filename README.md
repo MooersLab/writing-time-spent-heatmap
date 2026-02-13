@@ -5,11 +5,15 @@
 
 ## Problem addressed
 
-I wanted an automated way to sum up the effort I had expended on various writing projects in the form of a heatmap.
-The heat map of commits to GitHub is motivating in terms of encouraging frequent commits.
-I can gain a similar motivational driving force by displaying in public a heat map of hours spent working on journal articles per day.
+I wanted an automated way to summarize the effort I had put into various writing projects in the form of a heatmap.
+The GitHub commit heat map is motivating, encouraging frequent commits.
+I can gain a similar motivational boost by displaying a public heat map of the hours I spend working on journal articles and grant applications each day.
 I started posting this on December 4, 2024.
 Time will tell if this practice makes a difference.
+
+Note that I broke my leg in two ways on September 30, 2025. 
+I had seven operations: five to carve out bacteria-infected flesh and bone.
+I was bedridden for months.
 
 ![hmj.png](./images/hmgj.png)
 
@@ -18,21 +22,21 @@ Time will tell if this practice makes a difference.
 Comparing multiple years reveals seasonal patterns.
 The heat map also reveals periods when I have great difficulty completing my daily writing.
 For me, this happens when I am collecting X-ray diffraction data around the clock for several days and preparing multiple presentations concurrently.
-This identifies an area where I need to develop better self-regulation mechanisms, like not committing to two talks in the same two-week period.
-I can generally maintain my writing schedule despite teaching, traveling to attend scientific conferences, attending these conferences, and serving on Grant review panels.
+This identifies an area where I need to develop better self-regulation, such as not committing to two talks in the same two-week period.
+I can generally maintain my writing schedule despite teaching, traveling to and attending scientific conferences, and serving on Grant review panels.
 
 According to [research by Robert Boice in the 1980s](https://www.sciencedirect.com/science/article/abs/pii/0005796789901447), academics who record their writing effort are four times more productive than those who do not.
 Academics who share their writing progress with colleagues are nine times more productive.
 
 I started my database 2022 May 1. 
 I wrote and deployed `hmj.py` in November 2023.
-It made a difference in terms of expended effort in 2024 compared to 2023.
-Script `hmgj.py` combines grant and journal writing effort.
+It made a difference in the effort expended in 2024 compared to 2023.
+The script `hmgj.py` combines grant and research article-writing efforts.
 
 
 ## How it works
 
-1. I track time spent on various projects by project number and project directory name in an SQLite database, `my time.db`. I view and edit this database with DB Browser for Sqlite. The schema for the database table `zTimeSpent` is given below for reproducibility.
+1. I track time spent on various projects by project number and project directory name in an SQLite database, `my time.db`. I view and edit this database with DB Browser for SQLite. The schema for the database table `zTimeSpent` is given below for reproducibility.
 2. `hmj.py` reads the database file and searches for journal article entries by project number. Mine are in the range of 1 to 999. It sums the hours spent per day and generates the heatmap via matplotlib.
 3. A cron job to run `./hmj.py` every morning at 4:00 a.m. I stare at the displayed image and then get back to writing.
 
@@ -58,7 +62,7 @@ CREATE TABLE "zTimeSpent" (
 
 1. Assign project numbers to projects in a separate database or spreadsheet. I also use these numbers to start the names of project folders on my home directory to ease navigation on the command line. Your home folder can hold over 10,000 files. There is no need to use `Documents`.
 2. Edit the file paths in hmj.py to fit your workflow.
-3. Install the required Python packages. Take care that matplotlib is not yet being built in Python 3.13. I use Python 3.11. The Python modules `calmap` and `calplot` will likely need to be installed using 'pip'. It may be best to use a `conda` or `pyenv` environment to avoid the Python dependency nightmare at the expense of wasting disk space with redundant files.
+3. Install the required Python packages. Make sure matplotlib is not yet built in Python 3.13. I use Python 3.11. The Python modules `calmap` and `calplot` will likely need to be installed using 'pip'. It may be best to use a `conda` or `pyenv` environment to avoid the Python dependency nightmare at the expense of wasting disk space with redundant files.
 4. If you wish, set up a cron job to run hmj.py every morning and display the heatmap.
 
 The cron job calls the following zsh alias. I am using a `pyenv` environment made with Python3.11 installed with `home brew`.
@@ -107,7 +111,8 @@ mooerslab/writing-time-splitbox-heatmap.
 | Version 0.1 |   Added badges, funding, and update table.  Initial commit.                                                                              | 2024 December 4      |
 | Version 0.2 |   Light editing of the README.md file.                                                                                                   | 2024 December 16      |
 | Version 0.3 |   Add code for database table. Combined grant and journal article writing effort.                                                        | 2025 June 22      |
-| Version 0.4 |   Updated code to accommodate the new year.                                                      | 2026 January 27      |
+| Version 0.4 |   Updated code to accommodate the new year.                                                                                              | 2026 January 27      |
+| Version 0.5 |   Lightly edited the README.md file to improve readability.   																			| 2026 February 12  |
 
 ## Sources of funding
 
