@@ -5,8 +5,8 @@
 
 ## Problem addressed
 
-I wanted an automated way to summarize the effort I had put into various writing projects in the form of a heatmap.
-The GitHub commit heat map is motivating, encouraging frequent commits.
+I wanted an automated way to summarize the effort I had put into various writing projects as a heatmap.
+The GitHub commit heatmap is motivating and encourages frequent commits.
 I can gain a similar motivational boost by displaying a public heat map of the hours I spend working on journal articles and grant applications each day.
 I started posting this on December 4, 2024.
 Time will tell if this practice makes a difference.
@@ -31,7 +31,7 @@ Academics who share their writing progress with colleagues are nine times more p
 I started my database 2022 May 1. 
 I wrote and deployed `hmj.py` in November 2023.
 It made a difference in the effort expended in 2024 compared to 2023.
-The script `hmgj.py` combines grant and research article-writing efforts.
+The script `hmgj.py` combines grant- and research-article writing efforts.
 
 
 ## How it works
@@ -60,12 +60,12 @@ CREATE TABLE "zTimeSpent" (
 
 ## Installation
 
-1. Assign project numbers to projects in a separate database or spreadsheet. I also use these numbers to start the names of project folders on my home directory to ease navigation on the command line. Your home folder can hold over 10,000 files. There is no need to use `Documents`.
+1. Assign project numbers to projects in a separate database or spreadsheet. I also use these numbers to start the names of project folders in my home directory to ease navigation on the command line. Your home folder can hold over 10,000 files. There is no need to use `Documents`.
 2. Edit the file paths in hmj.py to fit your workflow.
 3. Install the required Python packages. Make sure matplotlib is not yet built in Python 3.13. I use Python 3.11. The Python modules `calmap` and `calplot` will likely need to be installed using 'pip'. It may be best to use a `conda` or `pyenv` environment to avoid the Python dependency nightmare at the expense of wasting disk space with redundant files.
 4. If you wish, set up a cron job to run hmj.py every morning and display the heatmap.
 
-The cron job calls the following zsh alias. I am using a `pyenv` environment made with Python3.11 installed with `home brew`.
+The cron job calls the following zsh alias. I am using a `pyenv` environment made with Python3.11 installed with `homebrew`.
 
 ```bash
 alias hmj='cd ~/6003TimeTracking/cb && source python311-env/bin/activate && ./python311-env/bin/python3.11 hmj.py && deactivate && echo "Run hmj.py and show total effort as a heatmap."'
@@ -110,7 +110,7 @@ mooerslab/writing-time-splitbox-heatmap.
 |:------------|:---------------------------------------------------------------------------------------------------------------------------------------- |:---------------------|
 | Version 0.1 |   Added badges, funding, and update table.  Initial commit.                                                                              | 2024 December 4      |
 | Version 0.2 |   Light editing of the README.md file.                                                                                                   | 2024 December 16      |
-| Version 0.3 |   Add code for database table. Combined grant and journal article writing effort.                                                        | 2025 June 22      |
+| Version 0.3 | Added code for the database table. Combined grant and journal article writing effort.                                                        | 2025 June 22      |
 | Version 0.4 |   Updated code to accommodate the new year.                                                                                              | 2026 January 27      |
 | Version 0.5 |   Lightly edited the README.md file to improve readability.   																			| 2026 February 12  |
 
